@@ -1,0 +1,44 @@
+:root {
+  --color-primary: #4D595F;
+  --color-secondary: #0C5844;
+  --color-accent: #C0DED6;
+  --color-background: #E7FBF7;
+  --color-text: #091922;
+  --color-white: #FFFFFF;
+  --color-light: #F8FAF9;
+}
+
+.app-container {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-background);
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+
+}
+
+.app-title {
+  font-size: 2.5rem;
+
+  font-family: 'Halyard Display Variable', sans-serif;
+  font-weight: bold;
+  color: var(--color-secondary);
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-text);
+  margin: 0;
+  margin-left: 320px;
+  font-family: 'Sans-serif', sans-serif;
+  max-width: 600px;
+  line-height: 1.5;
+}

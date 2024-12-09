@@ -1,0 +1,66 @@
+:root {
+    --color-primary: #4D595F;
+    --color-secondary: #0C5844;
+    --color-accent: #C0DED6;
+    --color-background: #E7FBF7;
+    --color-text: #091922;
+    --color-white: #FFFFFF;
+    --color-gray: #98ABA9;
+    --color-light: #F8FAF9;
+    --color-hover: #556166;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    gap: 10px;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 20px;
+    border: 2px solid var(--color-accent);
+    border-radius: 25px;
+    font-size: 1rem;
+    font-family: 'Halyard Display Variable', sans-serif;
+    background-color: var(--color-light);
+    color: var(--color-text);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: var(--color-hover);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.search-button:active {
+    background-color: var(--color-primary);
+}
+
+.search-bar input::placeholder {
+    color: var(--color-gray);
+    font-style: italic;
+}

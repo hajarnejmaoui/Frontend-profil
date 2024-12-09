@@ -1,0 +1,186 @@
+:root {
+    --color-primary: #4D595F;
+    --color-secondary: #0C5844;
+    --color-accent: #C0DED6;
+    --color-background: #E7FBF7;
+    --color-text: #091922;
+    --color-white: #FFFFFF;
+    --color-gray: #98ABA9;
+    --color-light: #F8FAF9;
+    --color-light-green: #E9FDF5;
+    --color-hover: #556166;
+    --font-main: 'Halyard Display Variable', 'Sans-serif';
+    --font-body: 'Sans-serif', 'Arial', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    margin: 0;
+    padding: 0;
+    color: var(--color-text);
+    font-size: 14px; /* Réduction de la taille de la police générale */
+}
+
+.facture-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: var(--color-light);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-light-green);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facture-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    font-family: var(--font-main);
+    font-size: 2rem; /* Réduction de la taille du titre principal */
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.facture-details {
+    margin-bottom: 20px;
+    background-color: var(--color-light-green);
+    padding: 15px; /* Réduction des marges internes */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.facture-info p, .prestataire-info p {
+    margin: 8px 0;
+    font-size: 1rem; /* Taille réduite pour les paragraphes */
+    line-height: 1.4;
+    color: var(--color-primary);
+}
+
+.prestataire-info {
+    background-color: var(--color-light-green);
+    padding: 15px; /* Réduction des marges internes */
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--color-gray);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.articles-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.9rem; /* Réduction de la taille des textes dans le tableau */
+    background-color: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.articles-table th, .articles-table td {
+    border: 1px solid var(--color-light-green);
+    padding: 10px;
+    text-align: left;
+}
+
+.articles-table th {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.95rem; /* Taille légèrement réduite pour les en-têtes */
+}
+
+.articles-table tr:nth-child(even) {
+    background-color: var(--color-accent);
+}
+
+.articles-table tr:hover {
+    background-color: var(--color-gray);
+    transition: background-color 0.3s ease;
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px; /* Taille minimale réduite */
+    padding: 10px; /* Réduction des marges internes */
+    border: 1px solid var(--color-gray);
+    border-radius: 10px;
+    resize: none;
+    font-size: 1rem; /* Taille réduite pour le texte saisi */
+    line-height: 1.4;
+    background-color: var(--color-light);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 8px rgba(12, 88, 68, 0.3);
+}
+
+button {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border: none;
+    padding: 10px 20px; /* Réduction de la taille des boutons */
+    border-radius: 30px;
+    font-size: 1rem; /* Taille réduite pour le texte du bouton */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+button:disabled {
+    background-color: var(--color-gray);
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: var(--color-hover);
+    transform: translateY(-2px);
+}
+/* Section de l'avis soumis */
+.submitted-review {
+    margin-top: 20px;
+    background-color: var(--color-light);
+    padding: 20px;
+    border-radius: 12px;
+    box-sizing:content-box;
+    border: 1px solid var(--color-accent);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.submitted-review .star-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Espacement entre les étoiles */
+    margin-bottom: 15px;
+}
+
+
+
+.submitted-review .star.selected {
+    color: var(--color-secondary); /* Couleur des étoiles sélectionnées */
+    transform: scale(1.1); /* Légèrement agrandie */
+}
+
+.submitted-review p {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    line-height: 1.6;
+    justify-content: center;
+    border-radius: 12px;
+    margin-top: 10px;
+    padding: 0 10px; /* Espacement horizontal pour le texte */
+    text-align: justify;
+}

@@ -1,0 +1,143 @@
+:root {
+    --color-primary: #4D595F;
+    --color-secondary: #0C5844;
+    --color-accent: #C0DED6;
+    --color-background: #E7FBF7;
+    --color-text: #091922;
+    --color-white: #FFFFFF;
+    --color-gray: #98ABA9;
+    --color-light: #F8FAF9;
+    --color-light-green: #E9FDF5;
+    --color-hover: #556166;
+}
+
+body {
+    font-family: 'Halyard Display Variable', 'Sans-serif';
+    background-color: var(--color-background);
+    margin: 0;
+    padding: 0;
+    color: var(--color-text);
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: var(--color-light);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+li div {
+    margin-bottom: 10px;
+}
+
+li div:last-child {
+    margin-bottom: 0;
+}
+
+button {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-hover);
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+    resize: none;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid var(--color-gray);
+    border-radius: 4px;
+}
+
+.star-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.star-container span {
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--color-gray);
+    transition: transform 0.2s ease;
+}
+
+.star-container span:hover {
+    transform: scale(1.2);
+}
+
+.star-container span.selected {
+    color: var(--color-secondary);
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    background-color: var(--color-accent);
+    color: var(--color-text);
+}
+
+.badge.reserved {
+    background-color: var(--color-gray);
+    color: var(--color-white);
+}
+.facture {
+    background-color: var(--color-light);
+    border: 1px solid var(--color-accent);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    color: var(--color-text);
+}
+
+.facture h3 {
+    margin-bottom: 10px;
+    color: var(--color-secondary);
+}
