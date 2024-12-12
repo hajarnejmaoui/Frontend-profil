@@ -37,8 +37,14 @@
   font-size: 1.2rem;
   color: var(--color-text);
   margin: 0;
+  text-align: center;
   margin-left: 320px;
   font-family: 'Sans-serif', sans-serif;
-  max-width: 600px;
+  max-width: 800px;
   line-height: 1.5;
+}
+.app-logo {
+  width: 100px;
+  height: auto;
+  text-align: left;
 }
